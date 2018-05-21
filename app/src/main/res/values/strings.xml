@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MusicPlayer</string>
+
+    <string name="song1_title">Blow Your Trumpets Gabriel</string>
+    <string name="song1_artist">Behemoth</string>
+    <string name="song1_album">Satanist</string>
+    <string name="song1_info">Nergal (Holocausto) and Baal Ravenlock (Sodomizer) initially called
+        their band Baphomet, but quickly changed the name to Behemoth due to there being too many
+        other bands with that name at that time.  Krzysztof Azarewicz wrote many of the lyrics on
+        the following albums: Satanica, Thelema.6, Zos Kia Cultus, Conjuration, Demigod, The
+        Apostasy, and Evangelion.</string>
+    <string name="song2_title">Thriumph of Death</string>
+    <string name="song2_artist">Vader</string>
+    <string name="song2_album">Tibi et igni</string>
+    <string name="song2_info">Formed around 1983. Started off as a heavy/speed metal band. They started achieving popularity in the Polish metal scene after the first Metalmania dition show in 1986. After going through a number of line-up and music direction changes, in 1987 they eventually embraced a death metal sound with reminiscences of thrash.</string>
+    <string name="song3_title">Withstand the Fall of Time</string>
+    <string name="song3_artist">Immortal</string>
+    <string name="song3_album">At the Heart of Winter</string>
+    <string name="song3_info">Euronymous of Mayhem is credited for getting Abbath Doom Occulta into black metal and as a result, Abbath getting Varg Vikernes (Burzum) into black metal as well. Despite these associations, Immortal\'s primary members have never been involved in the more controversial activities of some of their contemporaries in the second wave of black metal. Their lyrics have also never involved the religious or political ideologies often associated with the scene to any great extent, instead being concerned with darkness and evil in a fantasy setting.</string>
+    <string name="text_view_song_name">Song name</string>
+    <string name="text_view_album_name">Album name</string>
+    <string name="text_view_artist_name">Artist name</string>
+    <string name="button_explore">Explore</string>
+    <string name="button_artist_info">Artist Info</string>
+    <string name="text_view_info">Info text</string>
+
+</resources>
