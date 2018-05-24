@@ -53,9 +53,7 @@ public class MainActivity extends AppCompatActivity {
 						intent.putExtra("Position", position);
 
 						startActivity(intent);
-
 					}
-
 				};
 
 		listView.setOnItemClickListener(mMessageClickedHandler);

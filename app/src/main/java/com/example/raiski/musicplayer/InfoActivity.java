@@ -9,21 +9,41 @@ import android.widget.TextView;
 
 public class InfoActivity extends AppCompatActivity {
 
+	TextView artistName;
+	TextView artistInfo;
+
+	String artist;
+	String info;
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_info);
 
+		artistName = (TextView) findViewById(R.id.info_artist_name_text_view);
+		artistInfo = (TextView) findViewById(R.id.info_text_view);
+
 		Intent intent = getIntent();
 
-		String artist = intent.getStringExtra("InfoArtist");
-		String info = intent.getStringExtra("Info");
-
-		TextView artistName = (TextView) findViewById(R.id.info_artist_name_text_view);
-		TextView artistInfo = (TextView) findViewById(R.id.info_text_view);
+		artist = intent.getStringExtra("InfoArtist");
+		info = intent.getStringExtra("Info");
 
 		artistName.setText(artist);
 		artistInfo.setText(info);
 
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putString("artist", artist);
+		outState.putString("info", info);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		artist = savedInstanceState.getString("artist");
+		info = savedInstanceState.getString("info");
 	}
 
 }

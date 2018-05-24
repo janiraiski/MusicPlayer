@@ -20,12 +20,14 @@
         </activity>
         <activity
             android:name=".MusicPlayerActivity"
-            android:label="Now Playing">
+            android:label="Now Playing"
+            android:parentActivityName=".MainActivity">
 
         </activity>
         <activity
             android:name=".InfoActivity"
-            android:label="Artist Info">
+            android:label="Artist Info"
+            android:parentActivityName=".MusicPlayerActivity">
 
         </activity>
     </application>

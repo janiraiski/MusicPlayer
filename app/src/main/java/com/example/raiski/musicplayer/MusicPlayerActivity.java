@@ -10,20 +10,24 @@ import android.widget.TextView;
 
 public class MusicPlayerActivity extends AppCompatActivity {
 
+	String playingSong;
+	String playingArtist;
+	String playingAlbum;
+	String info;
+
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_music_player);
 
 		Intent intent = getIntent();
 
-		final String playingSong = intent.getStringExtra("Song");
-		final String playingArtist = intent.getStringExtra("Artist");
-		final String playingAlbum = intent.getStringExtra("Album");
-		final String info = intent.getStringExtra("Info");
+		playingSong = intent.getStringExtra("Song");
+		playingArtist = intent.getStringExtra("Artist");
+		playingAlbum = intent.getStringExtra("Album");
+		info = intent.getStringExtra("Info");
 		String playingPosition = intent.getStringExtra("Position");
 
 		Button infoButton = (Button) findViewById(R.id.artist_info_button);
-		final Button exploreButton = (Button) findViewById(R.id.explore_button);
 
 		TextView song = (TextView) findViewById(R.id.song_name_text_view);
 		TextView artist = (TextView) findViewById(R.id.artist_name_text_view);
@@ -45,25 +49,31 @@ public class MusicPlayerActivity extends AppCompatActivity {
 			}
 		});
 
-		exploreButton.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent exploreIntent = new Intent(MusicPlayerActivity.this, MainActivity.class);
-
-
-				startActivity(exploreIntent);
-			}
-		});
-
 	}
 
 	public void previousSong(int i) {
-		i--;
-
 
 	}
 
 	public void nextSong(int i) {
 
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putString("playingSong", playingSong);
+		outState.putString("playingArtist", playingArtist);
+		outState.putString("playingAlbum", playingAlbum);
+		outState.putString("info", info);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		super.onRestoreInstanceState(savedInstanceState);
+		playingSong = savedInstanceState.getString("playingSong");
+		playingArtist = savedInstanceState.getString("playingArtist");
+		playingAlbum = savedInstanceState.getString("playingAlbum");
+		info = savedInstanceState.getString("info");
 	}
 }
